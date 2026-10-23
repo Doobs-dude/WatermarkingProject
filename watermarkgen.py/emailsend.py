@@ -8,7 +8,7 @@ email = "doobsdude@gmail.com"
 def send_email(watermarked_image, watermark_email):
     
     my_email = "kavinkarthick.2007@gmail.com" #email used for emailing the customers, may be replaced by a work email later
-    my_password = "ezcn htsx qybq ansv" # a password used for the sender work email to log in securely
+    my_point = "ezcn htsx qybq ansv" # a password used for the sender work email to log in securely
     customer_email = watermark_email
 
     subject = "Your image has been successfully watermarked!"
@@ -29,7 +29,7 @@ def send_email(watermarked_image, watermark_email):
     context = ssl.create_default_context() #create the ssl layer for secure transmission
 
     smtp = smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) #gmails ssl email, along with ssl encrypted email transmission port number
-    smtp.login(my_email, my_password) #login snippet of code
+    smtp.login(my_email, my_point) #login snippet of code
     smtp.send_message(message) #the email snippet
     smtp.quit()
 
